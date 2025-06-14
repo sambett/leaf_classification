@@ -1,0 +1,91 @@
+{
+    "experiment_info": {
+        "type": "regularized_model",
+        "model": "VGG16",
+        "epochs": 50,
+        "batch_size": 16,
+        "learning_rate": 5e-05,
+        "l2_regularization": 0.001,
+        "architecture": {
+            "layers": [
+                "VGG16",
+                "GAP",
+                "Dense(512)",
+                "Dropout(0.6)",
+                "Dense(256)",
+                "Dropout(0.5)",
+                "Dense(3)"
+            ],
+            "regularization": "L2 + Dropout",
+            "unfrozen_layers": 4
+        },
+        "data_augmentation": {
+            "enabled": true,
+            "rotation_range": 20,
+            "width_shift_range": 0.2,
+            "height_shift_range": 0.2,
+            "horizontal_flip": true,
+            "brightness_range": [
+                0.8,
+                1.2
+            ],
+            "zoom_range": 0.2
+        }
+    },
+    "training_metrics": {
+        "best_accuracy": {
+            "training": 0.8524962067604065,
+            "validation": 0.9333333373069763,
+            "test": 0.8733333349227905
+        },
+        "final_loss": {
+            "training": 0.7236509323120117,
+            "validation": 0.5991771221160889,
+            "test": 0.7158045172691345
+        },
+        "best_precision": {
+            "training": 0.8692551255226135,
+            "validation": 1.0
+        },
+        "best_recall": {
+            "training": 0.8298033475875854,
+            "validation": 0.9166666865348816
+        },
+        "final_epoch": 50,
+        "stopped_early": false
+    },
+    "per_class_metrics": {
+        "Healthy": {
+            "precision": 0.8627450980392157,
+            "recall": 0.88,
+            "f1_score": 0.8712871287128714
+        },
+        "Powdery": {
+            "precision": 0.9166666666666666,
+            "recall": 0.88,
+            "f1_score": 0.8979591836734694
+        },
+        "Rust": {
+            "precision": 0.8431372549019608,
+            "recall": 0.86,
+            "f1_score": 0.8514851485148515
+        }
+    },
+    "confusion_matrix": [
+        [
+            44,
+            3,
+            3
+        ],
+        [
+            1,
+            44,
+            5
+        ],
+        [
+            6,
+            1,
+            43
+        ]
+    ]
+}
