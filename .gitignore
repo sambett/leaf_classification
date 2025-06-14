@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+plant-env/
+venv/
+env/
+.env
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compressed model (optional - use if hosting externally)
+*.h5.gz
+
+# Large model file (comment out if using Git LFS)
+# regularized_vgg16_model.h5
